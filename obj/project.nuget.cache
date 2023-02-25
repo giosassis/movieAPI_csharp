@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+u3oWlaRxDo6XeACDpfMv4PJcXORd7VqI5MZBIFxPWgORSTbr/jn1vP+333CuGGBTa1MHFbebVLcRjS8jD5i0w==",
+  "dgSpecHash": "16VPPuO6CZvU8HJSevBHdXSIy3l/wJs6vgTq0pvtj3OEBmRyPmlHR20d6rfacJDkcksFJs/x/9nes2bX06j1KA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\giova\\Desktop\\Programação\\movieAPI\\MovieAPI\\MovieAPI.csproj",
+  "projectFilePath": "C:\\Users\\giova\\Desktop\\Programação\\movieAPI\\MovieAPI\\MovieAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\giova\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\giova\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\giova\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.3\\microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.3\\microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.3\\microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",

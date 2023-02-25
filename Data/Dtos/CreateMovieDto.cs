@@ -1,20 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
-using System.Security.Cryptography;
 
-namespace MovieAPI.Models
+namespace MovieAPI.Data.Dtos
 {
-    public class Movie
+    public class CreateMovieDto
     {
-       
-        [Required]
-        public int Id { get; set; }
+        [Key]
 
         [StringLength(50)]
-        [Required(ErrorMessage = "Movie Title is required")]   
+        [Required(ErrorMessage = "Movie Title is required")]
         public string? Title { get; set; }
         [Required]
-        [MaxLength(50)]
+        [StringLength(50)]
         public string? Genre { get; set; }
         [Range(70, 600)]
         [Required]
@@ -22,8 +18,7 @@ namespace MovieAPI.Models
         [Required]
         public string? Description { get; set; }
         [Required]
-        [MaxLength(50)]
+        [StringLength(50)]
         public string? Director { get; set; }
-
     }
 }
