@@ -2,7 +2,7 @@
 
 namespace MovieAPI.Data.Dtos
 {
-    public class CreateMovieDto
+    public class UpdateMovieDto
     {
         [Key]
 
