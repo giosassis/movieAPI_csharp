@@ -8,6 +8,7 @@ namespace MovieAPI.Models
     {
        
         [Required]
+        [Key]
         public int Id { get; set; }
 
         [StringLength(50)]
@@ -24,6 +25,7 @@ namespace MovieAPI.Models
         [Required]
         [MaxLength(50)]
         public string? Director { get; set; }
+        public int AgeGroup { get; set; }
 
     }
 }

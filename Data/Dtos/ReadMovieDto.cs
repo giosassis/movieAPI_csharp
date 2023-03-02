@@ -8,6 +8,7 @@
         public int Runtime { get; set; }
         public string? Description { get; set; }
         public string? Director { get; set; }
+        public int AgeGroup { get; set; }
         public DateTime DateTime { get; set; } = DateTime.Now;
     }
 }

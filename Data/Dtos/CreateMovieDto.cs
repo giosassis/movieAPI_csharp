@@ -21,5 +21,6 @@ namespace MovieAPI.Data.Dtos
         [Required]
         [StringLength(50)]
         public string? Director { get; set; }
+        public int AgeGroup { get; set; }
     }
 }

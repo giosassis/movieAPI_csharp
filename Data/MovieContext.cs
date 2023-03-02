@@ -13,4 +13,6 @@ public class MovieContext : DbContext
     }
 
     public DbSet<Movie> Movie { get; set; }
+    public DbSet<Cinema> Cinema { get; set; }
+    public DbSet<Address> Address { get; set; }
 }
