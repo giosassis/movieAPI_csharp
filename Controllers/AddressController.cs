@@ -8,7 +8,7 @@ using System.Net;
 namespace MovieAPI.Controllers
 {
     [ApiController]
-    [Route("{controller]")]
+    [Route("[controller]")]
     public class AddressController : ControllerBase
     {
         private MovieContext _context;
@@ -24,7 +24,7 @@ namespace MovieAPI.Controllers
         [HttpPost]
         public IActionResult PostAddress([FromBody] CreateAddresDto addresDto)
         {
-            Address address = _mapper.Map<Address>(addresDto);
+            Address? address = _mapper.Map<Address>(addresDto);
             _context.Address.Add(address);
             _context.SaveChanges();
             return CreatedAtAction(nameof(GetAddressById),
@@ -41,7 +41,7 @@ namespace MovieAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetAddressById(int id)
         {
-            Address address = _context.Address.FirstOrDefault(address => address.Id == id);
+            Address? address = _context.Address.FirstOrDefault(address => address.Id == id);
             if (address != null)
             {
                 ReadAddressDto addresDto = _mapper.Map<ReadAddressDto>(address);
@@ -63,7 +63,7 @@ namespace MovieAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteAddress(int id)
         {
-            Address address = _context.Address.FirstOrDefault(address => address.Id == id);
+            Address? address = _context.Address.FirstOrDefault(address => address.Id == id);
             if (address == null)
             {
                 return NotFound("This address does not exists on database");

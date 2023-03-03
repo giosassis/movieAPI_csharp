@@ -7,7 +7,7 @@ using MovieAPI.Models;
 namespace MovieAPI.Controllers
 {
     [ApiController]
-    [Route("{controller]")]
+    [Route("[controller]")]
     public class CinemaController : ControllerBase
     {
         private MovieContext _context;
@@ -23,7 +23,7 @@ namespace MovieAPI.Controllers
         [HttpPost]
         public IActionResult PostCinema([FromBody] CreateCinemaDto cinemaDto)
         {
-            Cinema cinema = _mapper.Map<Cinema>(cinemaDto);
+            Cinema? cinema = _mapper.Map<Cinema>(cinemaDto);
             _context.Cinema.Add(cinema);
             _context.SaveChanges();
             return CreatedAtAction(nameof(GetCinemaById),
@@ -40,7 +40,7 @@ namespace MovieAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetCinemaById(int id)
         {
-            Cinema cinema = _context.Cinema.FirstOrDefault(cinema => cinema.Id == id);
+            Cinema? cinema = _context.Cinema.FirstOrDefault(cinema => cinema.Id == id);
             if (cinema != null)
             {
                 ReadCinemaDto cinemaDto = _mapper.Map<ReadCinemaDto> (cinema);
@@ -62,7 +62,7 @@ namespace MovieAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteCinema(int id)
         {
-            Cinema cinema = _context.Cinema.FirstOrDefault(cinema => cinema.Id == id);
+            Cinema? cinema = _context.Cinema.FirstOrDefault(cinema => cinema.Id == id);
             if (cinema == null)
             {
                 return NotFound("This cinema does not exists on database");

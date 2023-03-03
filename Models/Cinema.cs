@@ -12,8 +12,8 @@ namespace MovieAPI.Models
         [Required(ErrorMessage ="Name field is required.")]
         public string? Name { get; set; }
         [Required]
-        public int? AdressId { get; set; }
-        public virtual ICollection<Address> Address { get; set; }
+        public int AdressId { get; set; }
+        public virtual ICollection<Address>? Address { get; set; }
         [Required]
         public string? Owner { get; set; }
 

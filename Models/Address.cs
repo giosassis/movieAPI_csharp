@@ -8,7 +8,7 @@ namespace MovieAPI.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public virtual ICollection<Cinema> Cinema { get; set; }
+        public virtual ICollection<Cinema>? Cinema { get; set; }
         public string? ZipCode { get; set; }
         [Required]
         public string? City { get; set; }
