@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MovieAPI.Data;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("MovieConnection");
